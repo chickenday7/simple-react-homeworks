@@ -19,15 +19,16 @@
 }
 
 
-
 .messageItem {
   display: flex;
   flex-direction: row;
   width: 20%;
   margin-bottom: 15px;
+
   &__avatar {
     display: flex;
     margin-right: 30px;
+
     & > img {
       border: black solid 1px;
       width: 50px;
@@ -37,6 +38,7 @@
       align-self: flex-end;
     }
   }
+
   &__description {
     padding: 5px 10px;
     position: relative;
@@ -44,10 +46,8 @@
     flex-grow: 1;
     border-radius: 10px 10px 10px 0;
     background-color: rgba(87, 117, 100, 0.7);
-
   }
 }
-
 
 
 .description {
@@ -58,6 +58,7 @@
   &__text {
     padding: 5px 0;
     flex-grow: 1;
+    word-wrap: break-word;
   }
 
   &__time {

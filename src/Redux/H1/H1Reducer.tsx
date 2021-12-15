@@ -1,3 +1,5 @@
+
+
 const NEW_TEXT = 'NEW_TEXT';
 const ADD_MESSAGE = 'ADD_MESSAGE';
 
@@ -16,7 +18,7 @@ export type stateMessageType = {
 
 let initialState:stateMessageType = {
     messageData: [
-        {id:1, avatar:'https://sun9-74.userapi.com/Ph-WiuOtF985il9AvN9JqiCWedmHtSGSSTXrSA/ltEB2Z2-YO4.jpg',name:'chickenDay', message:'Send me message,pls', time:'this time'},
+        {id:1, avatar:'https://sun9-74.userapi.com/Ph-WiuOtF985il9AvN9JqiCWedmHtSGSSTXrSA/ltEB2Z2-YO4.jpg',name:'chickenDay', message:'Send me msg, pls ', time:'this time'},
 
     ],
     newMessageText: ''
@@ -36,7 +38,7 @@ const messageDataReducer:any = (state:stateMessageType = initialState , action:a
                     {
                         id: state.messageData.length + 1,
                         avatar:'https://sun9-74.userapi.com/Ph-WiuOtF985il9AvN9JqiCWedmHtSGSSTXrSA/ltEB2Z2-YO4.jpg',
-                        name: 'user',
+                        name: 'chickenDay',
                         message: state.newMessageText,
                         time: action.time,
                     }
