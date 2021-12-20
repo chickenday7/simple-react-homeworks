@@ -31,9 +31,9 @@ const AlternativeMessage = (props:any) => {
     }
 
 
-    type onAdddMessageType = () => void
-    const onAddMessage:onAdddMessageType = () => {
-        const time = `${new Date().getHours()}:${new Date().getMinutes() }`
+    type onAddMessageType = () => void
+    const onAddMessage:onAddMessageType = () => {
+        const time = `${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`
         props.newMessageText.trim() === ''
             ? alert('Message === null')
             : props.addMessage(time)
@@ -43,7 +43,7 @@ const AlternativeMessage = (props:any) => {
 
     return (
         <>
-            <span>ТУТ С РЕДАКСОМ</span>
+            <span>This with Redux</span>
             <div className={'message'}>
                 {listMessage}
                 <div className={'message__text'}>

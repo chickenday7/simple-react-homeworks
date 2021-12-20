@@ -3,6 +3,9 @@ import Affair from './Affair'
 import {AffairType, FilterType} from "./HW2";
 
 
+
+
+
 type AffairsPropsType = { // need to fix any
     data: Array<AffairType>
     setFilter: (arg0: FilterType) => void
@@ -32,9 +35,7 @@ const Affairs:FC<AffairsPropsType> = (props) => {
 
     return (
         <div>
-
             {mappedAffairs}
-
             <button onClick={setAll}>All</button>
             <button onClick={setHigh}>High</button>
             <button onClick={setMiddle}>Middle</button>

@@ -1,7 +1,6 @@
-import React, {ChangeEvent, DetailedHTMLProps, InputHTMLAttributes} from 'react'
-import s from './SuperCheckbox.module.css'
+import React, {ChangeEvent, DetailedHTMLProps, InputHTMLAttributes, useState} from 'react'
+import s from './SuperCheckbox.module.scss'
 
-// тип пропсов обычного инпута
 type DefaultInputPropsType = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>
 
 type SuperCheckboxPropsType = DefaultInputPropsType & {
@@ -19,23 +18,29 @@ const SuperCheckbox: React.FC<SuperCheckboxPropsType> = (
         ...restProps// все остальные пропсы попадут в объект restProps
     }
 ) => {
-    const onChangeCallback = (e: ChangeEvent<HTMLInputElement>) => {
-        // сделайте так чтоб работал onChange и onChangeChecked
-    }
 
-    const finalInputClassName = `${s.checkbox} ${className ? className : ''}`
+    const onChangeCallback = (e: ChangeEvent<HTMLInputElement>) => {
+        onChange && onChange(e)
+        onChangeChecked && onChangeChecked(e.currentTarget.checked)
+    }
+    const finalInputClassName = `${restProps.checked ? s.divCheckboxTrue : s.divCheckboxFalse} ${className ? className : ''}`
+    const finalCircClassName = `${restProps.checked ? s.circTrue : s.circFalse} ${className ? className : '' } `
+
 
     return (
-        <label>
+        <label className={s.label}  >
+            <div className={finalInputClassName} >
+                <div className={finalCircClassName}/>
+            </div>
             <input
                 type={'checkbox'}
                 onChange={onChangeCallback}
-                className={finalInputClassName}
+                className={s.checkbox}
 
-                {...restProps} // отдаём инпуту остальные пропсы если они есть (checked например там внутри)
+                {...restProps}
             />
             {children && <span className={s.spanClassName}>{children}</span>}
-        </label> // благодаря label нажатие на спан передастся в инпут
+        </label>
     )
 }
 

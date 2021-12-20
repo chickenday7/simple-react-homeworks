@@ -1,0 +1,60 @@
+.textNav{
+  display: inline-block;
+  height: 25px;
+  width: 224px;
+
+  & > a {
+    margin-left: 10px;
+    text-decoration: none;
+    &:nth-child(1){
+      margin-left: 0px;
+    }
+    &:link{
+      color: white;
+    }
+    &:visited{
+      color: white;
+    }
+    &:hover{
+      color: rgba(192, 44, 70, 0.5);
+    }
+  }
+}
+
+
+
+
+.buttonDiv{
+  display: inline-block;
+  margin-bottom: 10px;
+}
+.buttonMenuActive{
+  margin-left: 20px;
+  width: 60px;
+  height: 15px;
+}
+.buttonMenuDisable{
+
+  margin-left: 20px;
+  width: 60px;
+  height: 15px;
+}
+.exampleDisable{
+  transform: translate(-244px, 0);
+  animation-name: menuLeft;
+  animation-duration: 1s;
+}
+.exampleActive{
+  transform: translate(0,0);
+  animation-name: menuRight;
+  animation-duration: 1s;
+}
+
+@keyframes menuLeft {
+  from { transform: translate(0, 0);}
+  to { transform: translate(-244px,0); }
+}
+@keyframes menuRight {
+  from { transform: translate(-244px, 0);}
+  to { transform: translate(0,0); }
+}
