@@ -5,7 +5,11 @@ import s from './Header.module.scss'
 import SuperButton from "../h4/common/c2-SuperButton/SuperButton";
 
 
-
+type activeStyle = {
+    textDecoration:string,
+    color:string,
+    fontSize:string
+}
 const activeStyle:any = {
     textDecoration: "none",
     color: "rgba(192, 44, 70, 0.5)",

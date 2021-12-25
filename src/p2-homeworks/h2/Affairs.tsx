@@ -1,4 +1,4 @@
-import React, {FC} from 'react'
+import React, {FC,MouseEvent}  from 'react'
 import Affair from './Affair'
 import {AffairType, FilterType} from "./HW2";
 
@@ -28,18 +28,17 @@ const Affairs:FC<AffairsPropsType> = (props) => {
         />
     ))
 
-    const setAll = () => {props.setFilter('all')} // need to fix
-    const setHigh = () => {props.setFilter('high')}
-    const setMiddle = () => {props.setFilter('middle')}
-    const setLow = () => {props.setFilter('low')}
+    const setAll = (e:string) => {props.setFilter(e as "all" | "high" | "middle" | "low")}
+    const setAllButton = (e:MouseEvent<HTMLButtonElement>)=>{setAll(e.currentTarget.name)}
+
 
     return (
         <div>
             {mappedAffairs}
-            <button onClick={setAll}>All</button>
-            <button onClick={setHigh}>High</button>
-            <button onClick={setMiddle}>Middle</button>
-            <button onClick={setLow}>Low</button>
+            <button name={'all'} onClick={setAllButton}>All</button>
+            <button name={'high'} onClick={setAllButton}>High</button>
+            <button name={'middle'} onClick={setAllButton}>Middle</button>
+            <button name={'low'} onClick={setAllButton}>Low</button>
         </div>
     )
 }
