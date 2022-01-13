@@ -2,6 +2,7 @@ import React from 'react'
 import Error404 from "./pages/Error404";
 import PreJunior from "./pages/PreJunior";
 import {Route, Routes} from "react-router-dom";
+import {Junior} from "./pages/Junior";
 
 
 export const PATH = {
@@ -14,7 +15,7 @@ export const PATH = {
 
 
 
-function RoutesComponent(props: any) {
+function RoutesComponent() {
 
     return (
         <div>
@@ -28,7 +29,7 @@ function RoutesComponent(props: any) {
             <Routes>
                 <Route path={'/'} element={<PreJunior/>}/>
                 <Route path={PATH.PRE_JUNIOR} element={<PreJunior/>}/>
-                {/*<Route path={PATH.JUNIOR} element={}  />*/}
+                <Route path={PATH.JUNIOR} element={<Junior/>}/>
                 {/*<Route path={PATH.JUNIOR_PLUS}  />*/}
 
 

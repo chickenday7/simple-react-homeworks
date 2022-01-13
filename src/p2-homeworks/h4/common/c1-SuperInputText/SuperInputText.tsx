@@ -41,15 +41,16 @@ const SuperInputText: React.FC<SuperInputTextPropsType> = (
     }
 
     const finalSpanClassName = `${spanClassName ? spanClassName : ''} ${s.errorSpan} `
-    const finalWrapperClassName = `${s.wrapperInput} ${error ? s.errorWrapper : ''} ${className}`
+    const finalWrapperClassName = `${className!} ${s.wrapperInput} ${error ? s.errorWrapper : ''} `
     const finalInputClassName = `${error ? s.errorInput : s.input}`
     const finalNecessaryClassName = `${necessary ? s.necessarySpan : ''}`
 
     return (
-        <div className={s.settingPosition}>
-            <div className={finalWrapperClassName}>
+
+        <div className={finalWrapperClassName}>
+            <div className={s.settingPosition}>
                 <input
-                    type={'text'}
+                    type={type}
                     onChange={onChangeCallback}
                     onKeyPress={onKeyPressCallback}
                     className={finalInputClassName}
@@ -57,8 +58,8 @@ const SuperInputText: React.FC<SuperInputTextPropsType> = (
                     {...restProps}
                 />
                 <span className={finalNecessaryClassName}>{necessary ? '*' : ''}</span>
+                {error && <span className={finalSpanClassName}>{error}</span>}
             </div>
-            {error && <span className={finalSpanClassName}>{error}</span>}
 
         </div>
     )
