@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/simple-react-homeworks/static/css/main.12b1139b.chunk.css",
-    "main.js": "/simple-react-homeworks/static/js/main.fbcc8c1d.chunk.js",
-    "main.js.map": "/simple-react-homeworks/static/js/main.fbcc8c1d.chunk.js.map",
+    "main.css": "/simple-react-homeworks/static/css/main.98659279.chunk.css",
+    "main.js": "/simple-react-homeworks/static/js/main.5f9bf1e0.chunk.js",
+    "main.js.map": "/simple-react-homeworks/static/js/main.5f9bf1e0.chunk.js.map",
     "runtime-main.js": "/simple-react-homeworks/static/js/runtime-main.c9bd7900.js",
     "runtime-main.js.map": "/simple-react-homeworks/static/js/runtime-main.c9bd7900.js.map",
     "static/js/2.a9c039dd.chunk.js": "/simple-react-homeworks/static/js/2.a9c039dd.chunk.js",
     "static/js/2.a9c039dd.chunk.js.map": "/simple-react-homeworks/static/js/2.a9c039dd.chunk.js.map",
     "index.html": "/simple-react-homeworks/index.html",
-    "static/css/main.12b1139b.chunk.css.map": "/simple-react-homeworks/static/css/main.12b1139b.chunk.css.map",
+    "static/css/main.98659279.chunk.css.map": "/simple-react-homeworks/static/css/main.98659279.chunk.css.map",
     "static/js/2.a9c039dd.chunk.js.LICENSE.txt": "/simple-react-homeworks/static/js/2.a9c039dd.chunk.js.LICENSE.txt",
     "static/media/App.module.scss": "/simple-react-homeworks/static/media/Lexend-SemiBold.8b61968f.ttf",
     "static/media/index.scss": "/simple-react-homeworks/static/media/broken_noise.95bbfd03.png",
@@ -17,7 +17,7 @@
   "entrypoints": [
     "static/js/runtime-main.c9bd7900.js",
     "static/js/2.a9c039dd.chunk.js",
-    "static/css/main.12b1139b.chunk.css",
-    "static/js/main.fbcc8c1d.chunk.js"
+    "static/css/main.98659279.chunk.css",
+    "static/js/main.5f9bf1e0.chunk.js"
   ]
 }
